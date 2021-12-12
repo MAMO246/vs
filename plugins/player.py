@@ -392,7 +392,7 @@ async def yt_play_list(client, m: Message):
     with suppress(MessageIdInvalid, MessageNotModified):
         if m.reply_to_message is not None and m.reply_to_message.document:
             if m.reply_to_message.document.file_name != "YouTube_PlayList.json":
-                k=await m.reply("Invalid PlayList file given. Use @GetPlayListBot  or search for a playlist in @DumpPlaylist to get a playlist file.")
+                k=await m.reply("Invalid PlayList file given. Use @iPurex  or search for a playlist in @iPurex to get a playlist file.")
                 await delete_messages([m, k])
                 return
             ytplaylist=await m.reply_to_message.download()
@@ -415,7 +415,7 @@ async def yt_play_list(client, m: Message):
             else:
                 await delete_messages([m, status])
         else:
-            k=await m.reply("No playList file given. Use @GetPlayListBot  or search for a playlist in @DumpPlaylist to get a playlist file.")
+            k=await m.reply("No playList file given. Use @iPurex  or search for a playlist in @iPurex to get a playlist file.")
             await delete_messages([m, k])
 
 
@@ -501,9 +501,9 @@ async def not_chat(_, m: Message):
     else:
         buttons = [
             [
-                InlineKeyboardButton('⚡️Make Own Bot', url='https://github.com/subinps/VCPlayerBot'),
-                InlineKeyboardButton('🧩 Join Here', url='https://t.me/subin_works'),
+                InlineKeyboardButton('⚡️Make Own Bot', url='https://github.com/subinps/iPurex'),
+                InlineKeyboardButton('🧩 Join Here', url='https://t.me/iPurex'),
             ]
             ]
-        await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/subinps/VCPlayerBot) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+        await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://t.me/iPurex) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
 
