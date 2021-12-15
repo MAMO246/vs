@@ -53,7 +53,7 @@ IST = pytz.timezone(Config.TIME_ZONE)
 if Config.DATABASE_URI:
     from utils import db
 
-HOME_TEXT = "<b>اهلاً  [{}](tg://user?id={}) 😴\n\nانا بوت لتشغيل القران في القنوات او القروبات اضغط علي زر مساعدة في الاسفل لرؤية الاوامر.</b>"
+HOME_TEXT = "<b>اهلاً[{}](tg://user?id={}) 😴\n\nانا بوت لتشغيل القران في القنوات او القروبات اضغط علي زر مساعدة في الاسفل لرؤية الاوامر.</b>"
 admin_filter=filters.create(is_admin) 
 
 @Client.on_message(filters.command(['start', f"start@{Config.BOT_USERNAME}"]))
