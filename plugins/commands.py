@@ -129,12 +129,12 @@ async def start(client, message):
         return
     buttons = [
         [
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/iPurex'),
-            InlineKeyboardButton('🧩 Source', url='https://github.com/subinps/iPurex')
+            InlineKeyboardButton('⚙️ قناة التحديثات', url='https://t.me/MAMO246'),
+            InlineKeyboardButton('🧩 قناة السورس', url='https://t.me/iPurex')
         ],
         [
-            InlineKeyboardButton('👨🏼‍🦯 Help', callback_data='help_main'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton('👨🏼‍🦯 مساعدة', callback_data='help_main'),
+            InlineKeyboardButton('🗑 إغلاق', callback_data='close'),
         ]
     ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -188,12 +188,12 @@ async def show_help(client, message):
 async def repo_(client, message):
     buttons = [
         [
-            InlineKeyboardButton('🧩 Repository', url='https://github.com/subinps/iPurex'),
-            InlineKeyboardButton('⚙️ Update Channel', url='https://t.me/iPurex'),     
+            InlineKeyboardButton('🧩 قناة السورس', url='https://t.me/MAMO246'),
+            InlineKeyboardButton('⚙️ قناة التحديثات', url='https://t.me/iPurex'),     
         ],
         [
-            InlineKeyboardButton("🎞 How to Deploy", url='https://youtu.be/mnWgZMrNe_0'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton("🎞 قناة السورس", url='https://t.me/MAMO246'),
+            InlineKeyboardButton('🗑 إغلاق', callback_data='close'),
         ]
     ]
     await message.reply("<b>The source code of this bot is public and can be found at <a href=https://github.com/MAMO246/vs>VCPlayerBot.</a>\nYou can deploy your own bot and use in your group.\n\nFeel free to star☀️ the repo if you liked it 🙃.</b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
