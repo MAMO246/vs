@@ -1519,15 +1519,15 @@ async def settings_panel():
             ],
             [
                 InlineKeyboardButton("🎞 تشغيل فيديو او صوت", callback_data=f"info_video"),
-                InlineKeyboardButton(f"{'📺 تشغيل صوت فقط' if Config.IS_VIDEO else '🎙 صوت فقط'}", callback_data='is_video'),
+                InlineKeyboardButton(f"{'📺 تشغيل فيديو ' if Config.IS_VIDEO else '🎙 صوت فقط'}", callback_data='is_video'),
             ],
             [
                 InlineKeyboardButton("🤴 الادمنية فقط", callback_data=f"info_admin"),
-                InlineKeyboardButton(f"{'🔒 مفعل' if Config.ADMIN_ONLY else '🔓 مغلق'}", callback_data='admin_only'),
+                InlineKeyboardButton(f"{'✅مفعل' if Config.ADMIN_ONLY else '🚫 مغلق'}", callback_data='admin_only'),
             ],
             [
                 InlineKeyboardButton("🪶 تحرير العنوان", callback_data=f"info_title"),
-                InlineKeyboardButton(f"{'✏️ مفعل' if Config.EDIT_TITLE else '🚫 مغلق'}", callback_data='edit_title'),
+                InlineKeyboardButton(f"{'✅مفعل' if Config.EDIT_TITLE else '🚫 مغلق'}", callback_data='edit_title'),
             ],
             [
                 InlineKeyboardButton("🔀 تشغيل عشوائي", callback_data=f"info_shuffle"),
