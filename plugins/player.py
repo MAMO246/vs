@@ -490,7 +490,7 @@ async def not_chat(_, m: Message):
     if m.from_user is not None and m.from_user.id in Config.SUDO:
         buttons = [
             [
-                InlineKeyboardButton('⚡️Change CHAT', callback_data='set_new_chat'),
+                InlineKeyboardButton('⚡️تغير قناة التشغيل', callback_data='set_new_chat'),
             ],
             [
                 InlineKeyboardButton('No', callback_data='closesudo'),
@@ -505,5 +505,5 @@ async def not_chat(_, m: Message):
                 InlineKeyboardButton('🧩 قناة السورس', url='https://t.me/iPurex'),
             ]
             ]
-        await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://t.me/iPurex) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
+        await m.reply("<b>عذراً لا يمكنك استخدام هذا البوت, قم بمراسلة [المطور](https://t.me/HUCBOT) لإنشاء بوت خاص بك🙂.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
 
