@@ -31,7 +31,7 @@ from pyrogram import (
 
 buttons = [
     [
-        InlineKeyboardButton('⚡️تحديثات السورس', url='https://t.me/MAMO246'),
+        InlineKeyboardButton('⚡️مطور السورس', url='https://t.me/HUCBOT'),
         InlineKeyboardButton('🧩 قناة البوت', url='https://t.me/iPurex'),
     ]
     ]
@@ -47,8 +47,7 @@ async def search(client, query):
         answers.append(
             InlineQueryResultArticle(
                 title="Deploy",
-                input_message_content=InputTextMessageContent(f"{Config.REPLY_MESSAGE}\n\n<b>
-عذراً، لايمكنك استخدام هذا البوت،قم بمراسلة المطور لإنشاء بوت خاص بك. [المطور](https://t.me/HUCBOT)  لإنشاء بوت خاص بك.</b>", disable_web_page_preview=True),
+                input_message_content=InputTextMessageContent(f"{Config.REPLY_MESSAGE}\n\n<b>لا يمكنك استخدام هذا البوت , تواصل مع [المطور](https://t.me/HUCBOT) لانشاء بوت خاص بك.</b>", disable_web_page_preview=True),
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
