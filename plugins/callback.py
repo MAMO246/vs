@@ -160,7 +160,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             
         if not query.from_user.id in admins:
             await query.answer(
-                "😒 Played Joji.mp3",
+                "ما راح اقفله شتبي انت🙂؟ ",
                 show_alert=True
                 )
             return
