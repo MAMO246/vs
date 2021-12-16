@@ -501,8 +501,8 @@ async def not_chat(_, m: Message):
     else:
         buttons = [
             [
-                InlineKeyboardButton('⚡️Make Own Bot', url='https://github.com/subinps/iPurex'),
-                InlineKeyboardButton('🧩 Join Here', url='https://t.me/iPurex'),
+                InlineKeyboardButton('⚡️قناة التحديثات', url='https://t.me/MAMO246'),
+                InlineKeyboardButton('🧩 قناة السورس', url='https://t.me/iPurex'),
             ]
             ]
         await m.reply("<b>You can't use this bot in this group, for that you have to make your own bot from the [SOURCE CODE](https://t.me/iPurex) below.</b>", disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(buttons))
