@@ -31,8 +31,8 @@ from pyrogram import (
 
 buttons = [
     [
-        InlineKeyboardButton('⚡️Make Own Bot', url='https://github.com/subinps/iPurex'),
-        InlineKeyboardButton('🧩 Join Here', url='https://t.me/iPurex'),
+        InlineKeyboardButton('⚡️تحديثات السورس', url='https://t.me/MAMO246'),
+        InlineKeyboardButton('🧩 قناة البوت', url='https://t.me/iPurex'),
     ]
     ]
 def get_cmd(dur):
@@ -47,7 +47,8 @@ async def search(client, query):
         answers.append(
             InlineQueryResultArticle(
                 title="Deploy",
-                input_message_content=InputTextMessageContent(f"{Config.REPLY_MESSAGE}\n\n<b>You can't use this bot in your group, for that you have to make your own bot from the [SOURCE CODE](https://github.com/MAMO246/vs) below.</b>", disable_web_page_preview=True),
+                input_message_content=InputTextMessageContent(f"{Config.REPLY_MESSAGE}\n\n<b>
+عذراً، لايمكنك استخدام هذا البوت،قم بمراسلة المطور لإنشاء بوت خاص بك. [المطور](https://t.me/HUCBOT)  لإنشاء بوت خاص بك.</b>", disable_web_page_preview=True),
                 reply_markup=InlineKeyboardMarkup(buttons)
                 )
             )
