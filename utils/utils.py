@@ -1514,7 +1514,7 @@ async def settings_panel():
     reply_markup=InlineKeyboardMarkup(
         [
             [
-               InlineKeyboardButton(f"Player Mode", callback_data='info_mode'),
+               InlineKeyboardButton(f"وضع التشغيل", callback_data='info_mode'),
                InlineKeyboardButton(f"{'🔂 تشغيل بدون توقف' if Config.IS_LOOP else '▶️ المغادرة بعد الانتهاء'}", callback_data='is_loop'),
             ],
             [
@@ -1534,7 +1534,7 @@ async def settings_panel():
                 InlineKeyboardButton(f"{'✅ مفعل' if Config.SHUFFLE else '🚫 مغلق'}", callback_data='set_shuffle'),
             ],
             [
-                InlineKeyboardButton("👮 Auto Reply (PM Permit)", callback_data=f"info_reply"),
+                InlineKeyboardButton("👮 الرد التلقائي (PM Permit)", callback_data=f"info_reply"),
                 InlineKeyboardButton(f"{'✅ مفعل ' if Config.REPLY_PM else '🚫 مغلق'}", callback_data='reply_msg'),
             ],
             [
