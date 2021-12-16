@@ -1467,8 +1467,8 @@ async def get_buttons():
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(f"🎸 Start the Player", callback_data="restart"),
-                    InlineKeyboardButton('🗑 Close', callback_data='close'),
+                    InlineKeyboardButton(f"🎸 ابدا التشغيل", callback_data="restart"),
+                    InlineKeyboardButton('🗑 اغلاق', callback_data='close'),
                 ],
             ]
             )
@@ -1480,8 +1480,8 @@ async def get_buttons():
                 ],
                 [
                     InlineKeyboardButton(f"⏯ {get_pause(Config.PAUSE)}", callback_data=f"{get_pause(Config.PAUSE)}"),
-                    InlineKeyboardButton('🔊 Volume Control', callback_data='volume_main'),
-                    InlineKeyboardButton('🗑 Close', callback_data='close'),
+                    InlineKeyboardButton('🔊 التحكم في مستوى الصوت', callback_data='volume_main'),
+                    InlineKeyboardButton('🗑 اغلاق', callback_data='close'),
                 ],
             ]
             )
@@ -1492,18 +1492,18 @@ async def get_buttons():
                     InlineKeyboardButton(f"{get_player_string()}", callback_data='info_player'),
                 ],
                 [
-                    InlineKeyboardButton("⏮ Rewind", callback_data='rewind'),
+                    InlineKeyboardButton("⏮ إرجاع", callback_data='rewind'),
                     InlineKeyboardButton(f"⏯ {get_pause(Config.PAUSE)}", callback_data=f"{get_pause(Config.PAUSE)}"),
-                    InlineKeyboardButton(f"⏭ Seek", callback_data='seek'),
+                    InlineKeyboardButton(f"⏭ تفديم", callback_data='seek'),
                 ],
                 [
                     InlineKeyboardButton("🔄 Shuffle", callback_data="shuffle"),
-                    InlineKeyboardButton("⏩ Skip", callback_data="skip"),
+                    InlineKeyboardButton("⏩ تخطي", callback_data="skip"),
                     InlineKeyboardButton("⏮ Replay", callback_data="replay"),
                 ],
                 [
-                    InlineKeyboardButton('🔊 Volume Control', callback_data='volume_main'),
-                    InlineKeyboardButton('🗑 Close', callback_data='close'),
+                    InlineKeyboardButton('🔊 التحكم في مستوى الصوت', callback_data='volume_main'),
+                    InlineKeyboardButton('🗑 اغلاق', callback_data='close'),
                 ]
             ]
             )
@@ -1518,15 +1518,15 @@ async def settings_panel():
                InlineKeyboardButton(f"{'🔂 Non Stop Playback' if Config.IS_LOOP else '▶️ Play and Leave'}", callback_data='is_loop'),
             ],
             [
-                InlineKeyboardButton("🎞 Video", callback_data=f"info_video"),
-                InlineKeyboardButton(f"{'📺 Enabled' if Config.IS_VIDEO else '🎙 Disabled'}", callback_data='is_video'),
+                InlineKeyboardButton("🎞 تشغيل فيديو", callback_data=f"info_video"),
+                InlineKeyboardButton(f"{'📺 تشغيل صوت فقط' if Config.IS_VIDEO else '🎙 Disabled'}", callback_data='is_video'),
             ],
             [
-                InlineKeyboardButton("🤴 Admin Only", callback_data=f"info_admin"),
+                InlineKeyboardButton("🤴 الادمنية فقط", callback_data=f"info_admin"),
                 InlineKeyboardButton(f"{'🔒 Enabled' if Config.ADMIN_ONLY else '🔓 Disabled'}", callback_data='admin_only'),
             ],
             [
-                InlineKeyboardButton("🪶 Edit Title", callback_data=f"info_title"),
+                InlineKeyboardButton("🪶 تحرير العنوان", callback_data=f"info_title"),
                 InlineKeyboardButton(f"{'✏️ Enabled' if Config.EDIT_TITLE else '🚫 Disabled'}", callback_data='edit_title'),
             ],
             [
@@ -1551,7 +1551,7 @@ async def recorder_settings():
     reply_markup=InlineKeyboardMarkup(
         [
         [
-            InlineKeyboardButton(f"{'⏹ Stop Recording' if Config.IS_RECORDING else '⏺ Start Recording'}", callback_data='record'),
+            InlineKeyboardButton(f"{'⏹ ايقاف التسجيل' if Config.IS_RECORDING else '⏺ Start Recording'}", callback_data='record'),
         ],
         [
             InlineKeyboardButton(f"Record Video", callback_data='info_videorecord'),
@@ -1570,7 +1570,7 @@ async def recorder_settings():
             InlineKeyboardButton(f"{Config.RECORDING_DUMP if Config.RECORDING_DUMP else 'Not Dumping'}", callback_data='info_recdumb'),
         ],
         [
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton('🗑 إغلاق', callback_data='close'),
         ]
         ]
     )
@@ -1589,8 +1589,8 @@ async def volume_buttons():
             InlineKeyboardButton(f"+ 10", callback_data='volume_add'),
         ],
         [
-            InlineKeyboardButton(f"🔙 Back", callback_data='volume_back'),
-            InlineKeyboardButton('🗑 Close', callback_data='close'),
+            InlineKeyboardButton(f"🔙 رجوع", callback_data='volume_back'),
+            InlineKeyboardButton('🗑 اغلاق', callback_data='close'),
         ]
         ]
     )
