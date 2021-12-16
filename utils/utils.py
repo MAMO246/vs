@@ -1515,30 +1515,30 @@ async def settings_panel():
         [
             [
                InlineKeyboardButton(f"Player Mode", callback_data='info_mode'),
-               InlineKeyboardButton(f"{'🔂 Non Stop Playback' if Config.IS_LOOP else '▶️ Play and Leave'}", callback_data='is_loop'),
+               InlineKeyboardButton(f"{'🔂 تشغيل بدون توقف' if Config.IS_LOOP else '▶️ المغادرة بعد الانتهاء'}", callback_data='is_loop'),
             ],
             [
-                InlineKeyboardButton("🎞 تشغيل فيديو", callback_data=f"info_video"),
-                InlineKeyboardButton(f"{'📺 تشغيل صوت فقط' if Config.IS_VIDEO else '🎙 Disabled'}", callback_data='is_video'),
+                InlineKeyboardButton("🎞 تشغيل فيديو او صوت", callback_data=f"info_video"),
+                InlineKeyboardButton(f"{'📺 تشغيل صوت فقط' if Config.IS_VIDEO else '🎙 صوت فقط'}", callback_data='is_video'),
             ],
             [
                 InlineKeyboardButton("🤴 الادمنية فقط", callback_data=f"info_admin"),
-                InlineKeyboardButton(f"{'🔒 Enabled' if Config.ADMIN_ONLY else '🔓 Disabled'}", callback_data='admin_only'),
+                InlineKeyboardButton(f"{'🔒 مفعل' if Config.ADMIN_ONLY else '🔓 مغلق'}", callback_data='admin_only'),
             ],
             [
                 InlineKeyboardButton("🪶 تحرير العنوان", callback_data=f"info_title"),
-                InlineKeyboardButton(f"{'✏️ Enabled' if Config.EDIT_TITLE else '🚫 Disabled'}", callback_data='edit_title'),
+                InlineKeyboardButton(f"{'✏️ مفعل' if Config.EDIT_TITLE else '🚫 مغلق'}", callback_data='edit_title'),
             ],
             [
-                InlineKeyboardButton("🔀 Shuffle Mode", callback_data=f"info_shuffle"),
-                InlineKeyboardButton(f"{'✅ Enabled' if Config.SHUFFLE else '🚫 Disabled'}", callback_data='set_shuffle'),
+                InlineKeyboardButton("🔀 تشغيل عشوائي", callback_data=f"info_shuffle"),
+                InlineKeyboardButton(f"{'✅ مفعل' if Config.SHUFFLE else '🚫 مغلق'}", callback_data='set_shuffle'),
             ],
             [
                 InlineKeyboardButton("👮 Auto Reply (PM Permit)", callback_data=f"info_reply"),
-                InlineKeyboardButton(f"{'✅ Enabled' if Config.REPLY_PM else '🚫 Disabled'}", callback_data='reply_msg'),
+                InlineKeyboardButton(f"{'✅ مفعل ' if Config.REPLY_PM else '🚫 مغلق'}", callback_data='reply_msg'),
             ],
             [
-                InlineKeyboardButton('🗑 Close', callback_data='close'),
+                InlineKeyboardButton('🗑 إغلاق', callback_data='close'),
             ]
             
         ]
@@ -1551,7 +1551,7 @@ async def recorder_settings():
     reply_markup=InlineKeyboardMarkup(
         [
         [
-            InlineKeyboardButton(f"{'⏹ ايقاف التسجيل' if Config.IS_RECORDING else '⏺ Start Recording'}", callback_data='record'),
+            InlineKeyboardButton(f"{'⏹ ايقاف التسجيل' if Config.IS_RECORDING else '⏺ بدأ التسجيل'}", callback_data='record'),
         ],
         [
             InlineKeyboardButton(f"Record Video", callback_data='info_videorecord'),
