@@ -139,7 +139,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         ],
                     ]
                     )
-                await query.message.edit("Showing help menu, Choose from the below options.", reply_markup=reply_markup, disable_web_page_preview=True)
+                await query.message.edit("قائمة الاوامر الخاصة بالبوت , اضغط علي الازرار بالاسفل لعرض التفاصيل 👇.", reply_markup=reply_markup, disable_web_page_preview=True)
             elif nyav == 'play':
                 await query.message.edit(Config.PLAY_HELP, reply_markup=back, disable_web_page_preview=True)
             elif nyav == 'settings':
@@ -194,7 +194,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         else:
                             button.append([InlineKeyboardButton(text=f"{str(month)}  {str(year_)}",callback_data=f"sch_showdate_{year_}_{k}")])
                     button = button + button_
-                    button.append([InlineKeyboardButton("Close", callback_data="schclose")])
+                    button.append([InlineKeyboardButton("🗑️اغلاق", callback_data="schclose")])
                     await query.message.edit("Now Choose the month to schedule a voicechatㅤ ㅤㅤ", reply_markup=InlineKeyboardMarkup(button))
                 elif day == "none":
                     return
