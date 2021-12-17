@@ -53,7 +53,7 @@
         "required": true
       },
       "ADMIN_ONLY": {
-        "description": "Change it to True if you want to make /play command available for everyone.",
+        "description": "لا تقم بتغييرها .",
         "value": "False",
         "required": false
       },
@@ -72,7 +72,7 @@
       },
       "REPLY_MESSAGE": {
         "description": "A reply message to those who message the USER account in PM. Make it blank if you do not need this feature.",
-        "value": "Hey, Iam a bot to play music, not having time to chat with you.",
+        "value": "مرحباً👋، انا بوت لتشغيل القرآن الكريم هذه هي قناة المطور الخاص بي @iPurex .",
         "required": false
       }
     },
