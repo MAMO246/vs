@@ -1494,12 +1494,12 @@ async def get_buttons():
                 [
                     InlineKeyboardButton("⏮ إرجاع", callback_data='rewind'),
                     InlineKeyboardButton(f"⏯ {get_pause(Config.PAUSE)}", callback_data=f"{get_pause(Config.PAUSE)}"),
-                    InlineKeyboardButton(f"⏭ تفديم", callback_data='seek'),
+                    InlineKeyboardButton(f"⏭ تقديم", callback_data='seek'),
                 ],
                 [
-                    InlineKeyboardButton("🔄 Shuffle", callback_data="shuffle"),
+                    InlineKeyboardButton("🔄 تكرار", callback_data="shuffle"),
                     InlineKeyboardButton("⏩ تخطي", callback_data="skip"),
-                    InlineKeyboardButton("⏮ Replay", callback_data="replay"),
+                    InlineKeyboardButton("⏮ اعادة تشغيل", callback_data="replay"),
                 ],
                 [
                     InlineKeyboardButton('🔊 التحكم في مستوى الصوت', callback_data='volume_main'),
@@ -1523,19 +1523,19 @@ async def settings_panel():
             ],
             [
                 InlineKeyboardButton("🤴 الادمنية فقط", callback_data=f"info_admin"),
-                InlineKeyboardButton(f"{'✅مفعل' if Config.ADMIN_ONLY else '🚫 مغلق'}", callback_data='admin_only'),
+                InlineKeyboardButton(f"{'✅مفعل' if Config.ADMIN_ONLY else 'مغلق❌'}", callback_data='admin_only'),
             ],
             [
                 InlineKeyboardButton("🪶 تحرير العنوان", callback_data=f"info_title"),
-                InlineKeyboardButton(f"{'✅مفعل' if Config.EDIT_TITLE else '🚫 مغلق'}", callback_data='edit_title'),
+                InlineKeyboardButton(f"{'✅مفعل' if Config.EDIT_TITLE else 'مغلق❌'}", callback_data='edit_title'),
             ],
             [
                 InlineKeyboardButton("🔀 تشغيل عشوائي", callback_data=f"info_shuffle"),
-                InlineKeyboardButton(f"{'✅ مفعل' if Config.SHUFFLE else '🚫 مغلق'}", callback_data='set_shuffle'),
+                InlineKeyboardButton(f"{'✅ مفعل' if Config.SHUFFLE else 'مغلق❌'}", callback_data='set_shuffle'),
             ],
             [
                 InlineKeyboardButton("👮 الرد التلقائي (PM Permit)", callback_data=f"info_reply"),
-                InlineKeyboardButton(f"{'✅ مفعل ' if Config.REPLY_PM else '🚫 مغلق'}", callback_data='reply_msg'),
+                InlineKeyboardButton(f"{'✅ مفعل ' if Config.REPLY_PM else 'مغلق❌'}", callback_data='reply_msg'),
             ],
             [
                 InlineKeyboardButton('🗑 إغلاق', callback_data='close'),
@@ -1554,19 +1554,19 @@ async def recorder_settings():
             InlineKeyboardButton(f"{'⏹ ايقاف التسجيل' if Config.IS_RECORDING else '⏺ بدأ التسجيل'}", callback_data='record'),
         ],
         [
-            InlineKeyboardButton(f"Record Video", callback_data='info_videorecord'),
-            InlineKeyboardButton(f"{'Enabled' if Config.IS_VIDEO_RECORD else 'Disabled'}", callback_data='record_video'),
+            InlineKeyboardButton(f"تسجيل فيديو", callback_data='info_videorecord'),
+            InlineKeyboardButton(f"{'مفعل ✅' if Config.IS_VIDEO_RECORD else 'مغلق❌'}", callback_data='record_video'),
         ],
         [
-            InlineKeyboardButton(f"Video Dimension", callback_data='info_videodimension'),
-            InlineKeyboardButton(f"{'Portrait' if Config.PORTRAIT else 'Landscape'}", callback_data='record_dim'),
+            InlineKeyboardButton(f"ابعاد الفيديو", callback_data='info_videodimension'),
+            InlineKeyboardButton(f"{'لوحة' if Config.PORTRAIT else 'طبيعي'}", callback_data='record_dim'),
         ],
         [
-            InlineKeyboardButton(f"Custom Recording Title", callback_data='info_rectitle'),
-            InlineKeyboardButton(f"{Config.RECORDING_TITLE if Config.RECORDING_TITLE else 'Default'}", callback_data='info_rectitle'),
+            InlineKeyboardButton(f"عنوان التسجيل المخصص", callback_data='info_rectitle'),
+            InlineKeyboardButton(f"{Config.RECORDING_TITLE if Config.RECORDING_TITLE else 'Not Dumping'}", callback_data='info_rectitle'),
         ],
         [
-            InlineKeyboardButton(f"Recording Dump Channel", callback_data='info_recdumb'),
+            InlineKeyboardButton(f"تسجيل قناة التفريغ", callback_data='info_recdumb'),
             InlineKeyboardButton(f"{Config.RECORDING_DUMP if Config.RECORDING_DUMP else 'Not Dumping'}", callback_data='info_recdumb'),
         ],
         [
