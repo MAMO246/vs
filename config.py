@@ -194,7 +194,7 @@ class Config:
 
 
     #help strings 
-    PLAY_HELP="""
+    التشغيل_HELP="""
 __You can play using any of these options__
 
 1. Play a video from a YouTube link.
