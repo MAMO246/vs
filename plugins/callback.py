@@ -115,7 +115,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 [
                     [
                         InlineKeyboardButton("رجوع🔙", callback_data="help_main"),
-                        InlineKeyboardButton("اغلاق🗑️", callback_data="close"),
+                        InlineKeyboardButton("🗑️اغلاق", callback_data="close"),
                     ],
                 ]
                 )
@@ -135,7 +135,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         [
                             InlineKeyboardButton(f"اوامر الأخطاء❌", callback_data='help_misc'),
                             InlineKeyboardButton("اوامر التكوين⚠️", callback_data='help_env'),
-                            InlineKeyboardButton("إغلاق🗑️", callback_data="close"),
+                            InlineKeyboardButton("🗑️إغلاق", callback_data="close"),
                         ],
                     ]
                     )
