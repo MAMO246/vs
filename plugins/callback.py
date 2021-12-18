@@ -129,12 +129,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         ],
                         [
                             InlineKeyboardButton("اوامر الجدولة🎮", callback_data="help_schedule"),
-                            InlineKeyboardButton("اوامر التحكم", callback_data='help_control'),
+                            InlineKeyboardButton("اوامر التحكم〽️", callback_data='help_control'),
                             InlineKeyboardButton("اوامر الادمنية👮", callback_data="help_admin"),
                         ],
                         [
-                            InlineKeyboardButton(f"اوامر الأخطاء", callback_data='help_misc'),
-                            InlineKeyboardButton("اوامر التكوين", callback_data='help_env'),
+                            InlineKeyboardButton(f"اوامر الأخطاء❌", callback_data='help_misc'),
+                            InlineKeyboardButton("اوامر التكوين⚠️", callback_data='help_env'),
                             InlineKeyboardButton("إغلاق🗑️", callback_data="close"),
                         ],
                     ]
