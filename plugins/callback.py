@@ -114,8 +114,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             back=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Back", callback_data="help_main"),
-                        InlineKeyboardButton("Close", callback_data="close"),
+                        InlineKeyboardButton("رجوع🔙", callback_data="help_main"),
+                        InlineKeyboardButton("اغلاق🗑️", callback_data="close"),
                     ],
                 ]
                 )
@@ -123,19 +123,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(f"Play", callback_data='help_play'),
-                            InlineKeyboardButton(f"Settings", callback_data=f"help_settings"),
-                            InlineKeyboardButton(f"Recording", callback_data='help_record'),
+                            InlineKeyboardButton(f"اوامر التشغيل🎶", callback_data='help_play'),
+                            InlineKeyboardButton(f"الاعدادات⚙️", callback_data=f"help_settings"),
+                            InlineKeyboardButton(f"اوامر التسجيل🎦", callback_data='help_record'),
                         ],
                         [
-                            InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                            InlineKeyboardButton("Controling", callback_data='help_control'),
-                            InlineKeyboardButton("Admins", callback_data="help_admin"),
+                            InlineKeyboardButton("اوامر الجدولة🎮", callback_data="help_schedule"),
+                            InlineKeyboardButton("اوامر التحكم", callback_data='help_control'),
+                            InlineKeyboardButton("اوامر الادمنية👮", callback_data="help_admin"),
                         ],
                         [
-                            InlineKeyboardButton(f"Misc", callback_data='help_misc'),
-                            InlineKeyboardButton("Config Vars", callback_data='help_env'),
-                            InlineKeyboardButton("Close", callback_data="close"),
+                            InlineKeyboardButton(f"اوامر الأخطاء", callback_data='help_misc'),
+                            InlineKeyboardButton("اوامر التكوين", callback_data='help_env'),
+                            InlineKeyboardButton("إغلاق🗑️", callback_data="close"),
                         ],
                     ]
                     )
