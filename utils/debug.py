@@ -163,7 +163,7 @@ async def clear_play_list(client, m: Message):
 async def skip_track(_, m: Message):
     msg=await m.reply('trying to skip from queue..')
     if not Config.playlist:
-        await msg.edit("Playlist is Empty.")
+        await msg.edit("عذراً قائمة التشغيل فارغة😐♥️.")
         return
     if len(m.command) == 1:
         old_track = Config.playlist.pop(0)
