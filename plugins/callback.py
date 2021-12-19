@@ -413,10 +413,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data.lower() == 'seek':
             if not Config.CALL_STATUS:
-                return await query.answer("Not Playing anything.", show_alert=True)
+                return await query.answer("عذراً لا يوجد فيديو مشغل😐.", show_alert=True)
             #if not (Config.playlist or Config.STREAM_LINK):
                 #return await query.answer("Startup stream cant be seeked.", show_alert=True)
-            await query.answer("trying to seek.")
+            await query.answer("تم تقديم الفيديو بنجاح⚠️😴.")
             data=Config.DATA.get('FILE_DATA')
             if not data.get('dur', 0) or \
                 data.get('dur') == 0:
@@ -447,7 +447,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if not Config.playlist:
                     await query.answer("Player is empty, starting STARTUP_STREAM.")
                 else:
-                    await query.answer('Resuming the playlist')
+                    await query.answer('استئناف قائمة التشغيل😴〽️')
             await query.answer("Restrating the player")
             await restart()
             await query.message.edit(text=await get_playlist_str(), reply_markup=await get_buttons(), disable_web_page_preview=True)
