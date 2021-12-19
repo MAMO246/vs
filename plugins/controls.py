@@ -70,7 +70,7 @@ async def player(client, message):
 
 @Client.on_message(filters.command(["skip", f"skip@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
 async def skip_track(_, m: Message):
-    msg=await m.reply('trying to skip from queue..')
+    msg=await m.reply('جار محاولة التخطي😐⚠️..')
     if not Config.CALL_STATUS:
         await msg.edit(
             "Player is idle, start the player using below button. ㅤㅤㅤㅤ",
@@ -80,7 +80,7 @@ async def skip_track(_, m: Message):
         await delete_messages([m])
         return
     if not Config.playlist:
-        await msg.edit("Playlist is Empty.")
+        await msg.edit("عذراً قائمة التشغيل فارغة🤓.")
         await delete_messages([m, msg])
         return
     if len(m.command) == 1:
@@ -213,7 +213,7 @@ async def set_unmute(_, m: Message):
         return
     k=await unmute()
     if k:
-        k = await m.reply_text(f"🔊 Succesfully Unmuted ")
+        k = await m.reply_text(f"🔊 تمت اعادة الصوت بنجاح〽️ ")
         await delete_messages([m, k])
         return
     else:
@@ -286,7 +286,7 @@ async def seek_playout(client, m: Message):
         await delete_messages([m])
         return
     data=Config.DATA.get('FILE_DATA')
-    k=await m.reply("Trying to seek..")
+    k=await m.reply("جار محاولة التقديم⚙️..")
     if not data.get('dur', 0) or \
         data.get('dur') == 0:
         await k.edit("This stream cant be seeked.")
