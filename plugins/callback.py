@@ -353,29 +353,29 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_reply_markup(reply_markup=await get_buttons())
     
 
-        elif query.data.lower() == "ايقاف❌":
+        elif query.data.lower() == "pause":
             if Config.PAUSE:
-                await query.answer("بالفعل تم الايقاف😐", show_alert=True)
+                await query.answer("Already Paused", show_alert=True)
             else:
                 await pause()
-                await query.answer("ايقاف البث مؤقتاً ❌")
+                await query.answer("Stream Paused")
                 await sleep(1)
 
             await query.message.edit_reply_markup(reply_markup=await get_buttons())
  
         
-        elif query.data.lower() == "استئناف✅":   
+        elif query.data.lower() == "resume":   
             if not Config.PAUSE:
-                await query.answer("لا يوجد شئ موجود حتي يتم تشغيله😐💔", show_alert=True)
+                await query.answer("Nothing Paused to resume", show_alert=True)
             else:
                 await resume()
-                await query.answer("تم تشغيل البث〽️")
+                await query.answer("Redumed the stream")
                 await sleep(1)
             await query.message.edit_reply_markup(reply_markup=await get_buttons())
           
         elif query.data=="skip": 
             if not Config.playlist:
-                await query.answer("لا يوجد شئ في قائمة التشغيل😒", show_alert=True)
+                await query.answer("No songs in playlist", show_alert=True)
             else:
                 await query.answer("Trying to skip from playlist.")
                 await skip()
