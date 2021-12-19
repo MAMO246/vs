@@ -431,7 +431,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return await query.answer("Not Playing anything.", show_alert=True)
             #if not (Config.playlist or Config.STREAM_LINK):
                 #return await query.answer("Startup stream cant be seeked.", show_alert=True)
-            await query.answer("trying to rewind.")
+            await query.answer("تم تأخير الفيديو😒.")
             data=Config.DATA.get('FILE_DATA')
             if not data.get('dur', 0) or \
                 data.get('dur') == 0:
