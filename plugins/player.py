@@ -253,15 +253,15 @@ async def add_to_playlist(_, message: Message):
             await msg.edit("Link added to playlist")
         if not Config.CALL_STATUS \
             and len(Config.playlist) >= 1:
-            await msg.edit("Downloading and Processing...")
+            await msg.edit("جار تشغيل الفيديو〽️....")
             await download(Config.playlist[0], msg)
             await play()
         elif (len(Config.playlist) == 1 and Config.CALL_STATUS):
-            await msg.edit("Downloading and Processing...")
+            await msg.edit("جار تشغيل الفيديو〽️.... ")
             await download(Config.playlist[0], msg)  
             await play()
         elif message.command[0] == "fplay":
-            await msg.edit("Downloading and Processing...")
+            await msg.edit("جار تشغيل الفيديو〽️. ...")
             await download(Config.playlist[0], msg)  
             await play()
         else:
