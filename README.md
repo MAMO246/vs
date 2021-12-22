@@ -1,4 +1,4 @@
-# بوت موسيقي
+# بوت القران 
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/subinps/VCPlayerBot?color=blue&style=flat)
 ![GitHub issues](https://img.shields.io/github/issues/subinps/VCPlayerBot)
