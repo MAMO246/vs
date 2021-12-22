@@ -80,7 +80,7 @@ async def skip_track(_, m: Message):
         await delete_messages([m])
         return
     if not Config.playlist:
-        await msg.edit("عذراً قائمة التشغيل فارغة🤓.")
+        await msg.edit("عذراً قائمة التشغيل فارغة❗.")
         await delete_messages([m, msg])
         return
     if len(m.command) == 1:
