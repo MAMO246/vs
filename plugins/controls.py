@@ -70,7 +70,7 @@ async def player(client, message):
 
 @Client.on_message(filters.command(["skip", f"skip@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
 async def skip_track(_, m: Message):
-    msg=await m.reply('جار محاولة التخطي😐⚠️..')
+    msg=await m.reply('جار تخطي الفيديو〽️....')
     if not Config.CALL_STATUS:
         await msg.edit(
             "Player is idle, start the player using below button. ㅤㅤㅤㅤ",
