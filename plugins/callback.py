@@ -88,7 +88,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             elif you == "admin":
                 text="Enable to restrict the play command only for admins."
             elif you == "mode":
-                text="Enabling Non- stop playback will make the player running 24 / 7 and automatic startup when restarting . "
+                text="Enabling Non- stop playback will make the player running 24 / 7 and automatic startup when restarting. "
             elif you == "title":
                 text="Enable to edit the VideoChat title to Current playing song's title."
             elif you == "reply":
