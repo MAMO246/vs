@@ -366,7 +366,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
         elif query.data.lower() == "resume":   
             if not Config.PAUSE:
-                await query.answer("Nothing Paused to resume", show_alert=True)
+                await query.answer("لا شيء توقف للاستئناف〽️", show_alert=True)
             else:
                 await resume()
                 await query.answer("Redumed the stream")
