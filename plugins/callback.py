@@ -339,13 +339,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 ]
                 await query.message.edit("Are you sure that you want to cancel all the scheduled streams?", reply_markup=InlineKeyboardMarkup(buttons))
             elif data == "schclose":
-                await query.answer("تم إغلاق القائمة 〽️")
+                await query.answer("Menu Closed")
                 await query.message.delete()
                 await query.message.reply_to_message.delete()
 
         elif query.data == "shuffle":
             if not Config.playlist:
-                await query.answer("قائمة التشغيل فارغة🥺.", show_alert=True)
+                await query.answer(Playlist is empty.", show_alert=True)
                 return
             await shuffle_playlist()
             await query.answer("Playlist shuffled.")
@@ -572,6 +572,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     pass
                 else:
                     return await query.answer("Okda", show_alert=True)
-                await query.answer("تم إغلاق القائمة〽️")
+                await query.answer("Menu Closed")
                 await query.message.delete()
         await query.answer()
