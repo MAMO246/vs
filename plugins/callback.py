@@ -355,7 +355,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data.lower() == "pause":
             if Config.PAUSE:
-                await query.answer("Already Paused", show_alert=True)
+                await query.answer("تم الإيقاف مؤقتًا بالفعل😐", show_alert=True)
             else:
                 await pause()
                 await query.answer("Stream Paused")
