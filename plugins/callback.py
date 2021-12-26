@@ -377,7 +377,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             if not Config.playlist:
                 await query.answer("No songs in playlist", show_alert=True)
             else:
-                await query.answer("Trying to skip from playlist.")
+                await query.answer("جار تخطي الفيديو〽️.")
                 await skip()
                 await sleep(1)
             if Config.playlist:
