@@ -375,7 +375,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
           
         elif query.data=="skip": 
             if not Config.playlist:
-                await query.answer("No songs in playlist", show_alert=True)
+                await query.answer("قائمة التشغيل فارغة🙂❌", show_alert=True)
             else:
                 await query.answer("جار تخطي الفيديو〽️.")
                 await skip()
@@ -393,7 +393,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data=="replay":
             if not Config.playlist:
-                await query.answer("No songs in playlist", show_alert=True)
+                await query.answer("قائمة التشغيل فارغة🙂❌", show_alert=True)
             else:
                 await query.answer("trying to restart player")
                 await restart_playout()
