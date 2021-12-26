@@ -87,7 +87,7 @@ async def schedule_vc(bot, message):
                 text = message.text.split(" ", 1)
                 query = text[1]
             else:
-                await msg.edit("You Didn't gave me anything to schedule. Reply to a video or a youtube link or a direct link.")
+                await msg.edit("لم تعطني أي شيء لتشغيله ،قم بالرد على مقطع فيديو أو رابط youtube مباشر.......")
                 await delete_messages([message, msg])
                 return
             regex = r"^(?:https?:\/\/)?(?:www\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?"
