@@ -572,6 +572,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     pass
                 else:
                     return await query.answer("Okda", show_alert=True)
-                await query.answer("Menu Closed")
+                await query.answer("تم إغلاق القائمة〽️")
                 await query.message.delete()
         await query.answer()
