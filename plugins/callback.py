@@ -77,7 +77,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 return
             if you == "player":
                 if not Config.CALL_STATUS:
-                    return await query.answer("Not Playing anything.", show_alert=True)
+                    return await query.answer("عذراً لا يوحد شئ قيد التشغيل🙂✋.", show_alert=True)
                 await query.message.edit_reply_markup(reply_markup=await get_buttons())
                 await query.answer()
                 return
@@ -114,8 +114,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             back=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Back", callback_data="help_main"),
-                        InlineKeyboardButton("Close", callback_data="close"),
+                        InlineKeyboardButton("رجوع🔙", callback_data="help_main"),
+                        InlineKeyboardButton("🗑️اغلاق", callback_data="close"),
                     ],
                 ]
                 )
@@ -123,19 +123,19 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(f"Play", callback_data='help_play'),
-                            InlineKeyboardButton(f"Settings", callback_data=f"help_settings"),
-                            InlineKeyboardButton(f"Recording", callback_data='help_record'),
+                            InlineKeyboardButton(f"اوامر التشغيل🎶", callback_data='help_play'),
+                            InlineKeyboardButton(f"الاعدادات⚙️", callback_data=f"help_settings"),
+                            InlineKeyboardButton(f"اوامر التسجيل🎦", callback_data='help_record'),
                         ],
                         [
-                            InlineKeyboardButton("Scheduling", callback_data="help_schedule"),
-                            InlineKeyboardButton("Controling", callback_data='help_control'),
-                            InlineKeyboardButton("Admins", callback_data="help_admin"),
+                            InlineKeyboardButton("اوامر الجدولة🎮", callback_data="help_schedule"),
+                            InlineKeyboardButton("〽️اوامر التحكم", callback_data='help_control'),
+                            InlineKeyboardButton("اوامر الادمنية👮", callback_data="help_admin"),
                         ],
                         [
-                            InlineKeyboardButton(f"Misc", callback_data='help_misc'),
-                            InlineKeyboardButton("Config Vars", callback_data='help_env'),
-                            InlineKeyboardButton("Close", callback_data="close"),
+                            InlineKeyboardButton(f"اوامر الأخطاء❌", callback_data='help_misc'),
+                            InlineKeyboardButton("اوامر التكوين⚠️", callback_data='help_env'),
+                            InlineKeyboardButton("🗑️إغلاق", callback_data="close"),
                         ],
                     ]
                     )
@@ -413,10 +413,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data.lower() == 'seek':
             if not Config.CALL_STATUS:
-                return await query.answer("Not Playing anything.", show_alert=True)
+                return await query.answer("عذراً لا يوجد فيديو مشغل😐.", show_alert=True)
             #if not (Config.playlist or Config.STREAM_LINK):
                 #return await query.answer("Startup stream cant be seeked.", show_alert=True)
-            await query.answer("trying to seek.")
+            await query.answer("تم تقديم الفيديو بنجاح⚠️😴.")
             data=Config.DATA.get('FILE_DATA')
             if not data.get('dur', 0) or \
                 data.get('dur') == 0:
@@ -428,10 +428,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         elif query.data.lower() == 'rewind':
             if not Config.CALL_STATUS:
-                return await query.answer("Not Playing anything.", show_alert=True)
+                return await query.answer("عذراً لا يوجد شئ قيد التشغيل😶.", show_alert=True)
             #if not (Config.playlist or Config.STREAM_LINK):
                 #return await query.answer("Startup stream cant be seeked.", show_alert=True)
-            await query.answer("trying to rewind.")
+            await query.answer("تم تأخير الفيديو😒.")
             data=Config.DATA.get('FILE_DATA')
             if not data.get('dur', 0) or \
                 data.get('dur') == 0:
@@ -447,7 +447,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 if not Config.playlist:
                     await query.answer("Player is empty, starting STARTUP_STREAM.")
                 else:
-                    await query.answer('Resuming the playlist')
+                    await query.answer('استئناف قائمة التشغيل😴〽️')
             await query.answer("Restrating the player")
             await restart()
             await query.message.edit(text=await get_playlist_str(), reply_markup=await get_buttons(), disable_web_page_preview=True)
