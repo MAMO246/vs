@@ -1,3 +1,0 @@
-#TeleGram: @ADIL721
-import base64
-exec(base64.b64decode('ZnJvbSAubG9nZ2VyIGltcG9ydCBMT0dHRVIKZnJvbSAuZGVidWcgaW1wb3J0IGRlYnVnCmZyb20gLmRhdGFiYXNlIGltcG9ydCBkYgpmcm9tIC51dGlscyBpbXBvcnQgKgpmcm9tIC5weXJvX2RsIGltcG9ydCBEb3dubG9hZGVy'))
