@@ -1493,7 +1493,7 @@ async def get_buttons():
                 ],
                 [
                     InlineKeyboardButton("⏮ إرجاع", callback_data='rewind'),
-                    InlineKeyboardButton(f"⏯ {get_pause(Config.ايقاف مؤقتاً)}", callback_data=f"{get_pause(Config.PAUSE)}"),
+                    InlineKeyboardButton(f"⏯ {get_pause(Config.PAUSE )}", callback_data=f"{get_pause(Config.PAUSE)}"),
                     InlineKeyboardButton(f"⏭ تقديم", callback_data='seek'),
                 ],
                 [
