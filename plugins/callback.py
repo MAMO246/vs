@@ -353,7 +353,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_reply_markup(reply_markup=await get_buttons())
     
 
-        elif query.data.lower() == "pause":
+        elif query.data.lower() == "ايقاف مؤقتاً":
             if Config.PAUSE:
                 await query.answer("تم الإيقاف مؤقتًا بالفعل😐", show_alert=True)
             else:
