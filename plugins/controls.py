@@ -112,7 +112,7 @@ async def skip_track(_, m: Message):
         Config.msg['player'] = await msg.edit(pl, disable_web_page_preview=True, reply_markup=await get_buttons())
         await delete_messages([m])
 
-@Client.on_message(filters.command(["إيقاف مؤقتاً", f"pause@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
+@Client.on_message(filters.command(["Pause", f"pause@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
 async def pause_playing(_, m: Message):
     if not Config.CALL_STATUS:
         await m.reply_text(
