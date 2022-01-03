@@ -45,7 +45,7 @@ admin_filter=filters.create(is_admin)
 async def player(client, message):
     if not Config.CALL_STATUS:
         await message.reply_text(
-            "لم يتم اضافة شئ لتشغيله قم بالضغط علي بدا التشغيل لتشغيل الفيديو الرئيسي 😗ㅤㅤㅤㅤ",
+            " لم يتم اضافة شئ لتشغيله قم بالضغط علي بدا التشغيل لتشغيل الفيديو الرئيسي 🙂. ㅤㅤㅤㅤ",
             disable_web_page_preview=True,
             reply_markup=await get_buttons()
         )
