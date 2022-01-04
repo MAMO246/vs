@@ -69,12 +69,12 @@ async def add_to_playlist(_, message: Message):
         url=""
         if message.command[0] == "fplay":
             if not (message.from_user is None and message.sender_chat or message.from_user.id in admins):
-                k=await message.reply("This command is only for admins.")
+                k=await message.reply("هذا الأمر للمسؤولين فقط.")
                 await delete_messages([message, k])
                 return
         msg = await message.reply_text("⚡️ **يتم التحقق من المعلومات المدخلة....**")
         if message.reply_to_message and message.reply_to_message.video:
-            await msg.edit("⚡️ **Checking Telegram Media...**")
+            await msg.edit("⚡️ **يتم التحقق من المعلومات المدخلة.....**")
             type='video'
             m_video = message.reply_to_message.video       
         elif message.reply_to_message and message.reply_to_message.document:
@@ -109,7 +109,7 @@ async def add_to_playlist(_, message: Message):
                     has_audio_ = await is_audio(query)
                 except:
                     has_audio_ = False
-                    LOGGER.error("Unable to get Audio properties within time.")
+                    LOGGER.error("تعذر الحصول علي خصائص الصوت ❌.")
                 if has_audio_:
                     try:
                         dur=await get_duration(query)
@@ -220,7 +220,7 @@ async def add_to_playlist(_, message: Message):
             else:
                 title = info["title"]
                 if info['duration'] is None:
-                    await msg.edit("This is a live stream, Use /stream command.")
+                    await msg.edit("هذا الفيديو بث مباشر، يرجى استعمال امر /stream . ")
                     await delete_messages([message, msg])
                     return 
             data={1:title, 2:url, 3:"youtube", 4:user, 5:f"{nyav}_{user_id}"}
@@ -317,14 +317,14 @@ async def clear_play_list(client, m: Message):
 @Client.on_message(filters.command(["cplay", f"cplay@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
 async def channel_play_list(client, m: Message):
     with suppress(MessageIdInvalid, MessageNotModified):
-        k=await m.reply("Setting up for channel play..")
+        k=await m.reply("جارٍ الاعداد لقناة التشغيل..")
         if " " in m.text:
             you, me = m.text.split(" ", 1)
             if me.startswith("-100"):
                 try:
                     me=int(me)
                 except:
-                    await k.edit("Invalid chat id given")
+                    await k.edit("تم تقديم معرف دردشة غير صالح")
                     await delete_messages([m, k])
                     return
                 try:
