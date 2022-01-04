@@ -137,7 +137,7 @@ async def add_to_playlist(_, message: Message):
                         type="ytdl_s"
                         url=query
                     else:
-                        await msg.edit("This is an invalid link, provide me a direct link or a youtube link.")
+                        await msg.edit("هذا رابط غير صالح ، زودني برابط مباشر أو رابط يوتيوب.")
                         await delete_messages([message, msg])
                         return
             else:
