@@ -437,7 +437,7 @@ async def stream(client, m: Message):
             is_audio_ = False
             LOGGER.error("Unable to get Audio properties within time.")
         if not is_audio_:
-            k = await msg.edit("هذا رابط غير صالح ، زودني برابط مباشر أو رابط❌ youtube...")
+            k = await msg.edit("❌هذا رابط غير صالح ، زودني برابط مباشر أو رابط youtube...")
             await delete_messages([m, k])
             return
         try:
