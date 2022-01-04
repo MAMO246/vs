@@ -411,7 +411,7 @@ async def yt_play_list(client, m: Message):
 @Client.on_message(filters.command(["stream", f"stream@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
 async def stream(client, m: Message):
     with suppress(MessageIdInvalid, MessageNotModified):
-        msg=await m.reply("جارٍ التحقق من المعلومات المدخلة...")
+        msg=await m.reply("✅جارٍ التحقق من المعلومات المدخلة...")
         if m.reply_to_message and m.reply_to_message.text:
             link=m.reply_to_message.text
         elif " " in m.text:
@@ -437,7 +437,7 @@ async def stream(client, m: Message):
             is_audio_ = False
             LOGGER.error("Unable to get Audio properties within time.")
         if not is_audio_:
-            k = await msg.edit("This is an invalid link, provide me a direct link or a youtube link.")
+            k = await msg.edit("هذا رابط غير صالح ، زودني برابط مباشر أو رابط❌ youtube...")
             await delete_messages([m, k])
             return
         try:
