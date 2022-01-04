@@ -127,7 +127,7 @@ async def add_to_playlist(_, message: Message):
                     except:
                         dur=0
                     if dur == 0:
-                        await msg.edit("This is a live stream, Use /stream command.")
+                        await msg.edit("هذا الفيديو بث مباشر يرحي استخدام /stream بدلاً من /play.")
                         await delete_messages([message, msg])
                         return 
                     type="direct"
@@ -137,7 +137,7 @@ async def add_to_playlist(_, message: Message):
                         type="ytdl_s"
                         url=query
                     else:
-                        await msg.edit("هذا رابط غير صالح ، زودني برابط مباشر أو رابط يوتيوب.")
+                        await msg.edit("هذا رابط غير صالح ، زودني برابط مباشر أو رابط يوتيوب....")
                         await delete_messages([message, msg])
                         return
             else:
@@ -183,7 +183,7 @@ async def add_to_playlist(_, message: Message):
             else:
                 Config.playlist.append(data)
             await add_to_db_playlist(data)        
-            await msg.edit("Media added to playlist")
+            await msg.edit("تمت إضافة الوسائط إلى قائمة التشغيل.")
         elif type in ["youtube", "query", "ytdl_s"]:
             if type=="youtube":
                 await msg.edit("⚡️ **جار البحث عن الفيديو في اليوتيوب...**")
