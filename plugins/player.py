@@ -89,15 +89,15 @@ async def add_to_playlist(_, message: Message):
             type='video'
             m_video = message.reply_to_message.video       
         elif message.reply_to_message and message.reply_to_message.document:
-            await msg.edit("⚡️ **Checking Telegram Media...**")
+            await msg.edit("⚡️ **جارٍ التحقق من الملعومات المدخلة....**")
             m_video = message.reply_to_message.document
             type='video'
             if not "video" in m_video.mime_type:
-                return await msg.edit("The given file is invalid")
+                return await msg.edit("عذراً الملف الذي ارسلته لي خاطئ❌")
         elif message.reply_to_message and message.reply_to_message.audio:
             #if not Config.IS_VIDEO:
                 #return await message.reply("Play from audio file is available only if Video Mode if turned off.\nUse /settings to configure ypur player.")
-            await msg.edit("⚡️ **Checking Telegram Media...**")
+            await msg.edit("⚡️ **جارٍ التحقق من الملعومات المدخلة....**")
             type='audio'
             m_video = message.reply_to_message.audio       
         else:
