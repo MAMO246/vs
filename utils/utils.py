@@ -1523,19 +1523,19 @@ async def settings_panel():
             ],
             [
                 InlineKeyboardButton("🤴 الادمنية فقط", callback_data=f"info_admin"),
-                InlineKeyboardButton(f"{'✅مفعل' if Config.ADMIN_ONLY else 'مغلق❌'}", callback_data='admin_only'),
+                InlineKeyboardButton(f"{'مفعل✅' if Config.ADMIN_ONLY else 'مغلق❌'}", callback_data='admin_only'),
             ],
             [
                 InlineKeyboardButton("🪶 تحرير العنوان", callback_data=f"info_title"),
-                InlineKeyboardButton(f"{'✅مفعل' if Config.EDIT_TITLE else 'مغلق❌'}", callback_data='edit_title'),
+                InlineKeyboardButton(f"{'مفعل✅' if Config.EDIT_TITLE else 'مغلق❌'}", callback_data='edit_title'),
             ],
             [
                 InlineKeyboardButton("🔀 تشغيل عشوائي", callback_data=f"info_shuffle"),
-                InlineKeyboardButton(f"{'✅ مفعل' if Config.SHUFFLE else 'مغلق❌'}", callback_data='set_shuffle'),
+                InlineKeyboardButton(f"{'مفعل✅' if Config.SHUFFLE else 'مغلق❌'}", callback_data='set_shuffle'),
             ],
             [
                 InlineKeyboardButton("👮 الرد التلقائي (PM Permit)", callback_data=f"info_reply"),
-                InlineKeyboardButton(f"{'✅ مفعل ' if Config.REPLY_PM else 'مغلق❌'}", callback_data='reply_msg'),
+                InlineKeyboardButton(f"{'مفعل✅' if Config.REPLY_PM else 'مغلق❌'}", callback_data='reply_msg'),
             ],
             [
                 InlineKeyboardButton('🗑 إغلاق', callback_data='close'),
@@ -1555,7 +1555,7 @@ async def recorder_settings():
         ],
         [
             InlineKeyboardButton(f"تسجيل فيديو", callback_data='info_videorecord'),
-            InlineKeyboardButton(f"{'مفعل ✅' if Config.IS_VIDEO_RECORD else 'مغلق❌'}", callback_data='record_video'),
+            InlineKeyboardButton(f"{'مفعل✅' if Config.IS_VIDEO_RECORD else 'مغلق❌'}", callback_data='record_video'),
         ],
         [
             InlineKeyboardButton(f"ابعاد الفيديو", callback_data='info_videodimension'),
