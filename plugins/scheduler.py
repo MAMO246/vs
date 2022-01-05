@@ -1,5 +1,3 @@
-#!/us
-
 
 from utils import LOGGER
 import re
