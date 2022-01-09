@@ -204,16 +204,16 @@ async def set_unmute(_, m: Message):
         await delete_messages([m, k])
         return
     else:
-        k=await m.reply_text("Not muted, already unmuted.")    
+        k=await m.reply_text("غير مكتوم, غير مكتوم بالفعل.")    
         await delete_messages([m, k])
 
 
 @Client.on_message(filters.command(["replay", f"replay@{Config.BOT_USERNAME}"]) & admin_filter & chat_filter)
 async def replay_playout(client, m: Message):
-    msg = await m.reply('Checking player')
+    msg = await m.reply('التحقق من قائمة التشغيل 😴.... ')
     if not Config.CALL_STATUS:
         await msg.edit(
-            "Player is idle, start the player using below button. ㅤㅤㅤㅤㅤ",
+            "الحساب المساعد في وضع الايقاف اضغط علي الزر في الاسفل لبدأ التشغيل. ㅤㅤㅤㅤㅤ",
             disable_web_page_preview=True,
             reply_markup=await get_buttons()
         )
@@ -228,7 +228,7 @@ async def replay_playout(client, m: Message):
 async def show_player(client, m: Message):
     if not Config.CALL_STATUS:
         await m.reply_text(
-            "Player is idle, start the player using below button. ㅤㅤㅤㅤㅤ",
+            "البوت في وضع الايقاف، قم بالضغط علي الزر في الاسفل لبدأ تشغيل البوت✅. ㅤㅤㅤㅤㅤ",
             disable_web_page_preview=True,
             reply_markup=await get_buttons()
         )
@@ -266,7 +266,7 @@ async def show_player(client, m: Message):
 async def seek_playout(client, m: Message):
     if not Config.CALL_STATUS:
         await m.reply_text(
-            "Player is idle, start the player using below button. ㅤㅤㅤ ㅤㅤ",
+            "البوت في وضع الايقاف، قم بالضغط علي الزر في الاسفل لبدأ تشغيل البوت✅. ㅤㅤㅤ ㅤㅤ",
             disable_web_page_preview=True,
             reply_markup=await get_buttons()
         )
@@ -276,7 +276,7 @@ async def seek_playout(client, m: Message):
     k=await m.reply("جار محاولة التقديم⚙️..")
     if not data.get('dur', 0) or \
         data.get('dur') == 0:
-        await k.edit("This stream cant be seeked.")
+        await k.edit("لا يمكنك البحث عن هذا الفيديو❌.")
         await delete_messages([m, k])
         return
     if ' ' in m.text:
