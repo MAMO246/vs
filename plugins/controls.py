@@ -219,7 +219,7 @@ async def replay_playout(client, m: Message):
         )
         await delete_messages([m])
         return
-    await msg.edit(f"Replaying from begining")
+    await msg.edit("تم بنجاح اعادة تشغيل الفيديو من البداية ✅")
     await restart_playout()
     await delete_messages([m, msg])
 
