@@ -1,6 +1,6 @@
 import requests,telebot
 
-token = '{BOT_TOKEN}'
+token = {BOT_TOKEN}
 bot = telebot.TeleBot(token)
 
 
