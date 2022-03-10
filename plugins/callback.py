@@ -565,8 +565,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
         
         
         
-        
-        
-        if (input_text == السلام عليكم)
-
-print("وعليكم السلام ورحمة الله وبركاته")
+     
+ 
+  
