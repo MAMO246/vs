@@ -561,10 +561,4 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 await query.answer("تم إغلاق القائمة⛔")
                 await query.message.delete()
         await query.answer()
-        
-        
-        
-        
-     
- 
-  
+
